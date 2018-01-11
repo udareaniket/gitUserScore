@@ -1,0 +1,39 @@
+<div class="content" ng-controller="MainController">
+	<div class="row" ng-show="!search">
+		<form class="col s12">
+			<div class="row col s12"
+				ng-repeat="item in searchList track by $index">
+				<div class="input-field col s10">
+					<input class="col s10" id="item#{{$index}}" type="text"
+						ng-model="item.name" placeholder="Enter username"> <i
+						class="material-icons left"
+						ng-show="$last && searchList.length<10" ng-click="addRow()">add</i>
+				</div>
+			</div>
+			<a style="width: 100%" class="waves-effect waves-light btn"
+				ng-click="fetch()">Score</a>
+		</form>
+	</div>
+	<div class="row" ng-show="search">
+		<div class="col s12 m12" ng-repeat="item in gitList track by $index">
+			<div class="card">
+				<div class="collection" style="margin: 0 0 0 0">
+					<div class="collection-item avatar">
+						<img ng-click="go(item)" src="{{item.avatar_url}}" alt="" class="circle right"><span
+							class="title">{{item.name}}<span ng-show="item.name!=''">
+								//</span>{{item.login}}
+						</span> <span class="secondary-content"><i
+							style="font-size: 12px;" ng-show="$first" class="material-icons">grade</i>&nbsp;&nbsp;{{item.score}}
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row secondary-content" ng-show="search">
+		<i style="font-size: 12px;" class="material-icons">grade</i> -
+		Indicates the best choice.
+	</div>
+	<div class="row secondary-content" ng-show="search">Click on
+		avatar to visit public profile.</div>
+</div>
