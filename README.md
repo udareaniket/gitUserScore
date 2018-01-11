@@ -7,5 +7,7 @@ Follow these steps to score.
 
 
 Step 1: Enter username of the user you want to compare.
+
 Step 2: Click add button to add multiple users to compare.
+
 Step 3: Click Score to score the selected users.
