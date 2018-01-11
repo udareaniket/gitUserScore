@@ -1,4 +1,4 @@
-# gitUserScore
+# GitHub User Score
 GitHub User Score
 
 This application can be used to score the user according to the number of followers, number of people the selected user is following, number of gist and puclic repos and the type of user/organization.
